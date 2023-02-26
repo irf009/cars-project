@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca:wght@400&display=swap");
+:root {
+  --orange: hsl(31, 77%, 52%);
+  --cyan: hsl(184, 100%, 22%);
+  --dark-cyan: hsl(179, 100%, 13%);
+  --p-color: hsla(0, 0%, 100%, 0.75);
+  --b-h-btn-color: hsl(0, 0%, 95%);
+  --ff-primary: "Lexend Deca", sans-serif;
+  --ff-secondary: "Big Shoulders Display", cursive;
+  --transition: all 0.1s linear;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--b-h-btn-color);
+}
+p {
+  font-size: 15px;
+  font-family: var(--ff-primary);
+  color: var(--p-color);
+  line-height: 26px;
+  margin-bottom: 2rem;
+  max-width: 13rem;
+}
+h1 {
+  font-family: var(--ff-secondary);
+  color: var(--b-h-btn-color);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin: 1.5rem 0;
+}
+.btn {
+  padding: 0.8rem 1.75rem;
+  border: 3px solid var(--b-h-btn-color);
+  border-radius: 100px;
+  text-transform: capitalize;
+  font-family: var(--ff-primary);
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+}
+.btn:hover {
+  background: transparent;
+  color: var(--b-h-btn-color);
+}
+/* Columns Markup */
+.card {
+  width: 85vw;
+  height: 30rem;
+  margin: auto;
+  padding: 3rem;
+}
+.one {
+  background: var(--orange);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.two {
+  background: var(--cyan);
+}
+.three {
+  background: var(--dark-cyan);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.cars-card {
+  margin: 5rem 0;
+}
+.btnOne {
+  color: var(--orange);
+}
+.btnTwo {
+  color: var(--cyan);
+}
+.btnThree {
+  color: var(--dark-cyan);
+}
+@media screen and (min-width: 465px) {
+  .cars-card {
+    text-align: center;
+  }
+  .card {
+    height: 27rem;
+  }
+  p {
+    margin: auto;
+    margin-bottom: 2rem;
+    max-width: 17rem;
+  }
+}
+@media screen and (min-width: 1170px) {
+  .card {
+    width: 20%;
+    height: 30rem;
+    margin: 0;
+    transform: translateY(-1000px);
+    box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.5);
+    transition: var(--transition);
+  }
+  .cars-card {
+    margin: 0;
+    margin-top: calc((100vh - 30rem) / 2);
+    text-align: start;
+    display: flex;
+    justify-content: center;
+  }
+  .one {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+    animation: 2s columnDown3 ease-in-out 1;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+  }
+  .two {
+    animation: 2s columnDown2 ease-in-out 1;
+    animation-delay: 0;
+    animation-fill-mode: forwards;
+  }
+  .three {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 10px;
+    animation: 2s columnDown1 ease-in-out 1;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+  }
+  p {
+    max-width: 13rem;
+    margin-left: 0;
+    margin-bottom: 4rem;
+  }
+  @keyframes columnDown1 {
+    0% {
+      transform: translateY(-1000px);
+    }
+    /* 75% {
+      transform: translateY(30px);
+    } */
+    100% {
+      transform: translateY(0);
+    }
+  }
+  @keyframes columnDown2 {
+    0% {
+      transform: translateY(-1000px);
+    }
+    /* 75% {
+      transform: translateY(30px);
+    } */
+    100% {
+      transform: translateY(0);
+    }
+  }
+  @keyframes columnDown3 {
+    0% {
+      transform: translateY(-1000px);
+    }
+    /* 75% {
+      transform: translateY(30px);
+    } */
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
