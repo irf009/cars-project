@@ -24,6 +24,7 @@ p {
   line-height: 26px;
   margin-bottom: 2rem;
   max-width: 13rem;
+  min-width: 200px;
 }
 h1 {
   font-family: var(--ff-secondary);
@@ -91,11 +92,11 @@ h1 {
   }
   p {
     margin: auto;
-    margin-bottom: 2rem;
     max-width: 17rem;
+    margin-bottom: 3rem;
   }
 }
-@media screen and (min-width: 1170px) {
+@media screen and (min-width: 1200px) {
   .card {
     width: 20%;
     height: 30rem;
@@ -133,7 +134,7 @@ h1 {
   p {
     max-width: 13rem;
     margin-left: 0;
-    margin-bottom: 4rem;
+    /* margin-bottom: 4rem; */
   }
   @keyframes columnDown1 {
     0% {
