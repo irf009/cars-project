@@ -55,7 +55,7 @@ h1 {
   padding: 3rem;
 }
 .card h1 {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 3px 2px 25px;
 }
 .one {
   background: var(--orange);
